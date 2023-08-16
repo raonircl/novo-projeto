@@ -1,7 +1,11 @@
 <h1>Products</h1>
 
 <% @products.each do |product| %>
-    <p>Product: <%= product.nome %></p>
-    <p>Amount: <%= product.amount %></p>
-    <p>Price: <%= product.price %></p>
+  <p>Product: <%= product.nome %></p>
+  <p>Amount: <%= product.amount %></p>
+  <p>Price: <%= product.price %></p>
+  <%= link_to "product", product %>
 <% end %>
+
+<br>
+<%= link_to "New", new_product_path %>
